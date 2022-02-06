@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: yaml-extract-service
+spec:
+  selector:
+    app: yaml-extract-web
+  ports:
+    - protocol: TCP
+      port: 5123
+      targetPort: 5123
+  type: NodePort
