@@ -29,9 +29,10 @@ root.child1.listOfdicts[0].key1 ---> "element1"
 ```
 ## Prerequisitess
 First, git clone the repo:
-'''sh
+```sh
 git clone https://github.com/nadivravivz/ohadchallenge.git
-'''
+``` 
+<br />
 Tools:
 * [Python3](https://www.python.org/downloads/)
 * [Docker](https://docs.docker.com/get-docker/)
