@@ -45,7 +45,7 @@ Tools:
 * [MiniKube](#minikube)
 
 ## CLI
-### CLI info , --help
+### CLI Help , -h
 ```sh
 usage: yaml-extract.py [-h] -f FILE -e EXPR
 
@@ -61,13 +61,30 @@ required arguments:
 ```
 ### Steps
 In order to run the CLI you will need to have Python.
+
 After installing Python, run these commands from the repo folder:
 ```sh
 cd CLI
 pip install -r requirements.txt
 ```
 Next you will have 2 ways to use the CLI tool:
-### 1. 
+
+### 1. Using a File
+Test files are located in the tests folder.
+
+```
+# Example from file
+$ python yaml-extract.py -f tests/test.yaml --expr "root.child1.list[0]"
+$ element1
+```
+
+### 2. Using Standard Input (Stdin)
+```
+# Example from stdin
+$ cat tests/data/test.yaml | yaml-extract -f - --expr "root.child1.list"
+$ ["element1", "element2"]
+```
+
 
 
 ## Docker
