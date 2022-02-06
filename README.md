@@ -102,16 +102,18 @@ Test with docker mount
 # Example docker with mount
 # Run the commands from the main folder
 # Command exmaple: docker run -v <absolute yaml file path>:/app/test.yaml yaml-extract:latest -f ./test.yaml -e "<your expression>"
+
 $ docker run -v ${PWD}/tests/test.yaml:/app/test.yaml yaml-extract:latest -f ./test.yaml -e "root.child1.list[0]"
 $ element1
 ```
 
-### 2. 2. Using Standard Input (Stdin)
+### 2. Using Standard Input (Stdin)
 Test with Docker Stdin
 ```
 # Example docker with 
 # Command exmaple: cat <yaml files> | docker run -i yaml-extract:latest -f - -e "<your expression>"
 # Run the commands from the main folder
+
 $ cd tests
 $ cat test.yaml | docker run -i yaml-extract:latest -f - -e "root.child1.list[0]"
 $ element1
