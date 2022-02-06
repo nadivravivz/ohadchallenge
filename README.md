@@ -1,7 +1,7 @@
 # yaml-extract tool
 
 ## About
-This tool acts like JSONPath but for YAMLS.
+This tool acts like JSONPath but for YAMLS.<br />
 The tool gets as input:
 * A valid YAML text
 * A filter expression that represents the value to be extracted:
