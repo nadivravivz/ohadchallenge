@@ -1,0 +1,3 @@
+pyYAML
+jsonpath_ng
+flask
