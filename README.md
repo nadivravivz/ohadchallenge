@@ -27,6 +27,16 @@ root.child1.list[0]            ---> "element1"
 root.child1.list[1]            ---> "element2"
 root.child1.listOfdicts[0].key1 ---> "element1"
 ```
+## Prerequisitess
+First, git clone the repo:
+'''sh
+git clone https://github.com/nadivravivz/ohadchallenge.git
+'''
+Tools:
+* [Python3](https://www.python.org/downloads/)
+* [Docker](https://docs.docker.com/get-docker/)
+if the installation doesn't include docker-compose, you will have to install it manually.
+* [MiniKube](https://minikube.sigs.k8s.io/docs/start/)
 
 ## Implementation options
 * [CLI](#cli)
