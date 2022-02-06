@@ -32,7 +32,7 @@ First, git clone the repo:
 ```sh
 git clone https://github.com/nadivravivz/ohadchallenge.git
 ``` 
-<br />
+
 Tools:
 * [Python3](https://www.python.org/downloads/)
 * [Docker](https://docs.docker.com/get-docker/)
