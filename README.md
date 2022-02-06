@@ -30,7 +30,7 @@ root.child1.listOfdicts[0].key1 ---> "element1"
 
 ## Implementation options
 * [CLI](#cli)
-* [DOCKER](#docker)
+* [Docker](#docker)
 * [Web API](#web-api)
 * [MiniKube](#minikube)
 
