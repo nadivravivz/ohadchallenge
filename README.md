@@ -166,14 +166,17 @@ $ docker build -t yaml-extract-web .
 $ cd ..    # return to main folder
 $ minikube addons enable ingress
 $ kubectl apply -f ./yamls
-$ minikube service yaml-extract-service --url
+$ minikube tunnel
 ```
-Navigate to the IP displayed and check with /health if the minikube loadbalancing between the two Pods.
+Add this entry in your /etc/hosts
+```
+127.0.0.1 yaml-extract.test
+```
+Navigate to the yaml-extract/health and check if the minikube loadbalancing between the two Pods.
 
 ### Testing
-Same as Web API tests but with different host
 ```
 # Run commands from main folder
-$ curl http://<your host>/api/yaml_extract --data-binary "@./tests/request.json" -H "Content-Type: application/json"
+$ curl http://yaml-extract/api/yaml_extract --data-binary "@./tests/request.json" -H "Content-Type: application/json"
 $ {"data":"element1"}
 ```
