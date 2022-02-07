@@ -28,7 +28,7 @@ root.child1.list[0]            ---> "element1"
 root.child1.list[1]            ---> "element2"
 root.child1.listOfdicts[0].key1 ---> "element1"
 ```
-## Prerequisitess
+## Prerequisites
 First, git clone the repo:
 ```sh
 git clone https://github.com/nadivravivz/ohadchallenge.git
