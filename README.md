@@ -132,7 +132,7 @@ $ docker-compose up --build
 Following this the web server should be running.
 
 ### Testing
-On your web-browser, navigate to localhost:5123/health / 127.0.0.1:5123/health
+On your web-browser, navigate to localhost:5123/health or 127.0.0.1:5123/health
 
 If you see the message Health is good then proceed, else the implementation failed.
 
