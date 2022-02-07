@@ -7,8 +7,6 @@ The tool gets as input:
 * A valid YAML text
 * A filter expression that represents the value to be extracted:
 
-And the result is the extracted value.
-
 Exmaple:
 
 ```yaml
@@ -123,7 +121,39 @@ $ element1
 ```
 
 ## Web API
-flsfklsdkf
+The Web API implemented using docker-compose.
+Current API's are /health and /api/yaml-extract
+To implement the Web Api, follow these lines of code:
+```
+# Run commands from main folder
+$ cd web
+$ docker-compose up --build
+```
+Following this the web server should be running.
+
+### Testing
+On your web-browser, navigate to localhost:5123/health / 127.0.0.1:5123/health
+
+If you see the message Health is good then proceed, else the implementation failed.
+
+The yaml-extract API takes Json file with the message structure
+```
+{
+    "text": "<YAML_TEXT>",
+    "expr": "<EXPR>"
+}
+```
+and returns
+```
+{"data": <JSON_RESULT>}
+```
+
+* To test the yaml-extract API, follow this:
+```
+# Run commands from main folder
+$ curl http://localhost:5123/api/yaml_extract --data-binary "@./tests/request.json" -H "Content-Type: application/json"
+$ {"data":"element1"}
+```
 
 ## MiniKube
 sdfsdfsdf
