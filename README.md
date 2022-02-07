@@ -122,7 +122,9 @@ $ element1
 
 ## Web API
 The Web API implemented using docker-compose.
+
 Current API's are /health and /api/yaml-extract
+
 To implement the Web Api, follow these lines of code:
 ```
 # Run commands from main folder
