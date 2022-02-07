@@ -156,4 +156,24 @@ $ {"data":"element1"}
 ```
 
 ## MiniKube
-sdfsdfsdf
+To implement with MiniKube run the following commands:
+```
+# Run commands from main folder
+$ minikube start
+$ cd web
+$ eval $(minikube docker-env)
+$ docker build -t yaml-extract-web .
+$ cd ..    # return to main folder
+$ minikube addons enable ingress
+$ kubectl apply -f ./yamls
+$ minikube service yaml-extract-service --url
+```
+Navigate to the IP displayed and check with /health if the minikube loadbalancing between the two Pods.
+
+### Testing
+Same as Web API tests but with different host
+```
+# Run commands from main folder
+$ curl http://<your host>/api/yaml_extract --data-binary "@./tests/request.json" -H "Content-Type: application/json"
+$ {"data":"element1"}
+```
